@@ -24,19 +24,21 @@ import de.sengerts.tictactoe.ui.screens.TitleScreen;
 
 public class TicTacToeGame extends Game {
 	
+	// Menu Size Constants
 	public static final int MENU_WIDTH = 900;
 	public static final int MENU_HEIGHT = 900;
 
+	// Settings
 	private Dimension territorySize;
 	private boolean aiOpponent;
 	private AIDifficulty aiDifficulty;
 	
-	private GameLogic gameLogic;
-
+	// Asset management and rendering
 	private AssetManager assetManager;
 	private Skin skin;
-
 	private ShapeRenderer shapeRenderer;
+	
+	private GameLogic gameLogic;
 
 	@Override
 	public void create() {
