@@ -6,13 +6,18 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import de.sengerts.tictactoe.model.AIDifficulty;
 import de.sengerts.tictactoe.model.AIPlayer;
 import de.sengerts.tictactoe.model.Dimension;
+import de.sengerts.tictactoe.model.GameState;
 import de.sengerts.tictactoe.model.HumanPlayer;
 import de.sengerts.tictactoe.model.Location;
 import de.sengerts.tictactoe.model.Player;
 import de.sengerts.tictactoe.model.PlayerSign;
 import de.sengerts.tictactoe.model.Territory;
+import de.sengerts.tictactoe.model.ai.EasyAIPlayer;
+import de.sengerts.tictactoe.model.ai.HardAIPlayer;
+import de.sengerts.tictactoe.model.ai.MediumAIPlayer;
 
 /**
  * Class representing a tic tac toe game.
@@ -33,6 +38,17 @@ public class GameLogic {
 	 * Instance variable that stores the size of this tic tac toe game.
 	 */
 	private final Dimension size;
+
+	/**
+	 * Instance variable that stores whether the opponent of this tic tac toe game
+	 * is an AI player.
+	 */
+	private final boolean aiOpponent;
+
+	/**
+	 * Instance variable that stores the AI difficulty of this tic tac toe game.
+	 */
+	private final AIDifficulty aiDifficulty;
 
 	/**
 	 * Instance variable that stores the territory of this tic tac toe game.
@@ -63,7 +79,7 @@ public class GameLogic {
 	 * 
 	 * @param size the size of the tic tac toe game territory
 	 */
-	public GameLogic(final Dimension size, final boolean aiOpponent) {
+	public GameLogic(final Dimension size, final boolean aiOpponent, final AIDifficulty aiDifficulty) {
 		if (size == null) {
 			throw new IllegalArgumentException("Given size can not be null!");
 		}
@@ -77,10 +93,12 @@ public class GameLogic {
 		// TODO Verify that row/ column count is odd
 		this.gameState = GameState.INGAME;
 		this.size = size;
+		this.aiOpponent = aiOpponent;
+		this.aiDifficulty = aiDifficulty;
 		this.players = new LinkedList<Player>();
 		this.territory = new Territory(this);
 
-		initPlayers(aiOpponent);
+		initPlayers();
 	}
 
 	/**
@@ -90,17 +108,32 @@ public class GameLogic {
 	 * player and an ai player and adding them to the set in the instance variable
 	 * players.
 	 */
-	private void initPlayers(boolean aiOpponent) {
-		// TODO Allow both players to be human?
+	private void initPlayers() {
 		HumanPlayer humanPlayer = new HumanPlayer(this, PlayerSign.X);
-		Player opponentPlayer = aiOpponent 
-				? new AIPlayer(this, PlayerSign.O) : new HumanPlayer(this, PlayerSign.O);
+		Player opponentPlayer = aiOpponent ? getNewAIPlayer() : new HumanPlayer(this, PlayerSign.O);
 
 		players.add(humanPlayer);
 		players.add(opponentPlayer);
 
 		this.currentPlayerIndex = RANDOM.nextInt(players.size());
 		checkAIPlayersTurn();
+	}
+
+	/**
+	 * Creates a new AI player.
+	 * 
+	 * Creates and returns a new AI Player with given set AI difficulty.
+	 * 
+	 * @return new AI Player with given difficulty
+	 */
+	private AIPlayer getNewAIPlayer() {
+		if (aiDifficulty == AIDifficulty.EASY) {
+			return new EasyAIPlayer(this, PlayerSign.O);
+		} else if (aiDifficulty == AIDifficulty.MEDIUM) {
+			return new MediumAIPlayer(this, PlayerSign.O);
+		} else {
+			return new HardAIPlayer(this, PlayerSign.O);
+		}
 	}
 
 	/**

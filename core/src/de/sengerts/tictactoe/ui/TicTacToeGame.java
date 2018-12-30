@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import de.sengerts.tictactoe.logic.GameLogic;
+import de.sengerts.tictactoe.model.AIDifficulty;
 import de.sengerts.tictactoe.model.Dimension;
 import de.sengerts.tictactoe.ui.screens.EndScreen;
 import de.sengerts.tictactoe.ui.screens.LoadingScreen;
@@ -28,6 +29,8 @@ public class TicTacToeGame extends Game {
 
 	private Dimension territorySize;
 	private boolean aiOpponent;
+	private AIDifficulty aiDifficulty;
+	
 	private GameLogic gameLogic;
 
 	private AssetManager assetManager;
@@ -39,6 +42,7 @@ public class TicTacToeGame extends Game {
 	public void create() {
 		this.territorySize = new Dimension(3, 3);
 		this.aiOpponent = true;
+		this.aiDifficulty = AIDifficulty.MEDIUM;
 		this.assetManager = new AssetManager();
 		this.shapeRenderer = new ShapeRenderer();
 		
@@ -80,7 +84,7 @@ public class TicTacToeGame extends Game {
 	}
 
 	public void setPlayScreen() {
-		this.gameLogic = new GameLogic(getTerritorySize(), isAiOpponent());
+		this.gameLogic = new GameLogic(getTerritorySize(), isAiOpponent(), getAiDifficulty());
 		
 		PlayScreen playScreen = new PlayScreen(this);
 		// new TransitionScreen(this, getScreen(), playScreen)
@@ -154,6 +158,14 @@ public class TicTacToeGame extends Game {
 
 	public void setAiOpponent(boolean aiOpponent) {
 		this.aiOpponent = aiOpponent;
+	}
+
+	public AIDifficulty getAiDifficulty() {
+		return aiDifficulty;
+	}
+
+	public void setAiDifficulty(AIDifficulty aiDifficulty) {
+		this.aiDifficulty = aiDifficulty;
 	}
 
 }

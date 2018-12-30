@@ -9,6 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.CheckBox;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.SelectBox;
 import com.badlogic.gdx.scenes.scene2d.ui.Slider;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
@@ -16,6 +17,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import de.sengerts.tictactoe.model.AIDifficulty;
 import de.sengerts.tictactoe.model.Dimension;
 import de.sengerts.tictactoe.ui.TicTacToeGame;
 
@@ -30,14 +32,17 @@ public class OptionsScreen implements Screen {
 	private Slider slider;
 	private Label sliderLabel;
 	private CheckBox checkbox;
+	private SelectBox<AIDifficulty> selectBox; 
 
 	private int territorySize;
 	private boolean aiOpponent;
+	private AIDifficulty aiDifficulty;
 
 	public OptionsScreen(final TicTacToeGame ticTacToeGame) {
 		this.ticTacToeGame = ticTacToeGame;
 		this.territorySize = ticTacToeGame.getTerritorySize().getRowsCount();
 		this.aiOpponent = ticTacToeGame.isAiOpponent();
+		this.aiDifficulty = ticTacToeGame.getAiDifficulty();
 
 		this.batch = new SpriteBatch();
 		this.camera = new OrthographicCamera();
@@ -75,6 +80,12 @@ public class OptionsScreen implements Screen {
 		// Create Opponent Toggle
 		this.checkbox = new CheckBox("AI opponent", ticTacToeGame.getSkin());
 		checkbox.setChecked(aiOpponent);
+		
+		// Create AI difficulty select box
+		Label aiDifficultyLabel = new Label("AI Difficulty:", ticTacToeGame.getSkin(), "dec-font-32", "light");
+		this.selectBox = new SelectBox<AIDifficulty>(ticTacToeGame.getSkin());
+		selectBox.setItems(AIDifficulty.values());
+		selectBox.setSelected(aiDifficulty);
 
 		// Create Save Button
 		TextButton saveButton = new TextButton("Save", ticTacToeGame.getSkin());
@@ -85,6 +96,7 @@ public class OptionsScreen implements Screen {
 			public void clicked(InputEvent event, float x, float y) {
 				ticTacToeGame.setTerritorySize(new Dimension(territorySize, territorySize));
 				ticTacToeGame.setAiOpponent(aiOpponent);
+				ticTacToeGame.setAiDifficulty(aiDifficulty);
 				ticTacToeGame.setTitleScreen();
 			}
 		});
@@ -96,7 +108,11 @@ public class OptionsScreen implements Screen {
 		mainTable.row();
 		mainTable.add(slider).padBottom(30f);
 		mainTable.row();
-		mainTable.add(checkbox);
+		mainTable.add(checkbox).padBottom(30f);
+		mainTable.row();
+		mainTable.add(aiDifficultyLabel);
+		mainTable.row();
+		mainTable.add(selectBox);
 		mainTable.row();
 		mainTable.add(saveButton).padTop(70f);
 
@@ -111,6 +127,7 @@ public class OptionsScreen implements Screen {
 
 		updateSlider();
 		updateCheckbox();
+		updateAIDifficulty();
 
 		stage.act();
 		stage.draw();
@@ -123,6 +140,10 @@ public class OptionsScreen implements Screen {
 
 	private void updateCheckbox() {
 		this.aiOpponent = checkbox.isChecked();
+	}
+	
+	private void updateAIDifficulty() {
+		this.aiDifficulty = selectBox.getSelected();
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.logic;
+package de.sengerts.tictactoe.model;
 
 /**
  * Enumerations of the possible states of a tic tac toe game.

@@ -24,9 +24,9 @@
 	},
 	com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
 		default: {
-			font: dec-font-64, fontColor: white, background: default-select,
+			font: dec-font-32, fontColor: white, background: default-select,
 			scrollStyle: default,
-			listStyle: { font: dec-font-64, selection: default-select-selection }
+			listStyle: { font: dec-font-32, selection: default-select-selection }
 		}
 	},
 	com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {

@@ -163,7 +163,7 @@ public class Territory {
 		return tilesStreamSupplier.get().allMatch(tile -> (tile.isMarked()
 				&& tile.getMarkedPlayer().getPlayerSign() == firstMarkedPlayer.getPlayerSign()));
 	}
-
+	
 	/**
 	 * Gets a supplier of the stream of all tiles in the left diag in this
 	 * territory.
