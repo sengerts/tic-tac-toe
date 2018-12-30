@@ -1,9 +1,10 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.players;
 
 import java.util.List;
 
 import de.sengerts.tictactoe.exceptions.TileAreadyMarkedException;
 import de.sengerts.tictactoe.logic.GameLogic;
+import de.sengerts.tictactoe.model.board.Tile;
 
 /**
  * Class representing a AI player of a tic tac toe game.

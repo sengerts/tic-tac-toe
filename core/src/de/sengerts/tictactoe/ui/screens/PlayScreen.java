@@ -13,10 +13,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteCache;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
-import de.sengerts.tictactoe.model.Dimension;
-import de.sengerts.tictactoe.model.PlayerSign;
-import de.sengerts.tictactoe.model.Territory;
-import de.sengerts.tictactoe.model.Tile;
+import de.sengerts.tictactoe.model.board.Territory;
+import de.sengerts.tictactoe.model.board.Tile;
+import de.sengerts.tictactoe.model.players.PlayerSign;
+import de.sengerts.tictactoe.model.settings.Dimension;
 import de.sengerts.tictactoe.ui.TicTacToeGame;
 
 public class PlayScreen implements Screen {

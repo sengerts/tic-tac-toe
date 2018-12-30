@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.board;
 
 /**
  * Immutable class representing a location in the game territory.

@@ -1,6 +1,7 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.board;
 
 import de.sengerts.tictactoe.exceptions.TileAreadyMarkedException;
+import de.sengerts.tictactoe.model.players.Player;
 
 /**
  * Class representing one tile of the game territory at a specific location that

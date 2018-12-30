@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model.ai;
+package de.sengerts.tictactoe.model.players.ai;
 
 import java.util.List;
 import java.util.function.Supplier;
@@ -6,10 +6,10 @@ import java.util.stream.Stream;
 
 import de.sengerts.tictactoe.exceptions.TileAreadyMarkedException;
 import de.sengerts.tictactoe.logic.GameLogic;
-import de.sengerts.tictactoe.model.AIPlayer;
-import de.sengerts.tictactoe.model.Dimension;
-import de.sengerts.tictactoe.model.PlayerSign;
-import de.sengerts.tictactoe.model.Tile;
+import de.sengerts.tictactoe.model.board.Tile;
+import de.sengerts.tictactoe.model.players.AIPlayer;
+import de.sengerts.tictactoe.model.players.PlayerSign;
+import de.sengerts.tictactoe.model.settings.Dimension;
 
 public class MediumAIPlayer extends AIPlayer {
 
@@ -37,8 +37,6 @@ public class MediumAIPlayer extends AIPlayer {
 	 */
 	@Override
 	public void makeMove() {
-		System.out.println("Making a move..");
-
 		Tile currentTile = null;
 		if ((currentTile = getLastUnmarkedRowOrColumnTile()) != null
 				|| (currentTile = getLastUnmarkedDiagTile()) != null) {
@@ -48,7 +46,6 @@ public class MediumAIPlayer extends AIPlayer {
 				// Not reachable
 			}
 		} else {
-			System.out.println("Marking random tile..");
 			markRandomTile();
 		}
 		getGameLogic().endMove();
@@ -127,7 +124,8 @@ public class MediumAIPlayer extends AIPlayer {
 	 * of tiles.
 	 * 
 	 * Gets whether the human player has marked all but one tile in a given stream
-	 * of tiles by checking if the amount of tiles that are marked by the human
+	 * of tiles by checking if there is exactly one unmarked tile left in the stream
+	 * of tiles and by checking if the amount of tiles that are marked by the human
 	 * player in the given stream of tiles is the row/ column count of the territory
 	 * minus 1.
 	 * 

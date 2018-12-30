@@ -1,12 +1,12 @@
-package de.sengerts.tictactoe.model.ai;
+package de.sengerts.tictactoe.model.players.ai;
 
 import java.util.List;
 
 import de.sengerts.tictactoe.exceptions.TileAreadyMarkedException;
 import de.sengerts.tictactoe.logic.GameLogic;
-import de.sengerts.tictactoe.model.AIPlayer;
-import de.sengerts.tictactoe.model.PlayerSign;
-import de.sengerts.tictactoe.model.Tile;
+import de.sengerts.tictactoe.model.board.Tile;
+import de.sengerts.tictactoe.model.players.AIPlayer;
+import de.sengerts.tictactoe.model.players.PlayerSign;
 
 public class EasyAIPlayer extends AIPlayer {
 

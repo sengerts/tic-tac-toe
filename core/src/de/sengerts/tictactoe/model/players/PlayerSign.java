@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.players;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Colors;

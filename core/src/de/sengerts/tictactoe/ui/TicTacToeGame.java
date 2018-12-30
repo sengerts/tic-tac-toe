@@ -14,8 +14,8 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import de.sengerts.tictactoe.logic.GameLogic;
-import de.sengerts.tictactoe.model.AIDifficulty;
-import de.sengerts.tictactoe.model.Dimension;
+import de.sengerts.tictactoe.model.settings.AIDifficulty;
+import de.sengerts.tictactoe.model.settings.Dimension;
 import de.sengerts.tictactoe.ui.screens.EndScreen;
 import de.sengerts.tictactoe.ui.screens.LoadingScreen;
 import de.sengerts.tictactoe.ui.screens.OptionsScreen;

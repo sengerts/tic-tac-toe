@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.settings;
 
 /**
  * Enumerations of the possible difficulties for

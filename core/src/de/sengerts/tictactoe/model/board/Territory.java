@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.board;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -6,6 +6,8 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 import de.sengerts.tictactoe.logic.GameLogic;
+import de.sengerts.tictactoe.model.players.Player;
+import de.sengerts.tictactoe.model.settings.Dimension;
 
 /**
  * Class representing the territory of a tic tac toe game.

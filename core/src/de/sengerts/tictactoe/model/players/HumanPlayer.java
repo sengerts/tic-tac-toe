@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.players;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
@@ -6,6 +6,8 @@ import com.badlogic.gdx.utils.Scaling;
 
 import de.sengerts.tictactoe.exceptions.TileAreadyMarkedException;
 import de.sengerts.tictactoe.logic.GameLogic;
+import de.sengerts.tictactoe.model.board.Location;
+import de.sengerts.tictactoe.model.board.Tile;
 
 /**
  * Class representing a human player of a tic tac toe game.

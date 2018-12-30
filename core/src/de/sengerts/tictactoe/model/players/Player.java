@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.players;
 
 import de.sengerts.tictactoe.logic.GameLogic;
 

@@ -16,8 +16,8 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-import de.sengerts.tictactoe.model.Player;
-import de.sengerts.tictactoe.model.PlayerSign;
+import de.sengerts.tictactoe.model.players.Player;
+import de.sengerts.tictactoe.model.players.PlayerSign;
 import de.sengerts.tictactoe.ui.TicTacToeGame;
 
 public class EndScreen implements Screen {

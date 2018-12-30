@@ -1,4 +1,4 @@
-package de.sengerts.tictactoe.model;
+package de.sengerts.tictactoe.model.settings;
 
 /**
  * Immutable class representing a dimension for the game territory.

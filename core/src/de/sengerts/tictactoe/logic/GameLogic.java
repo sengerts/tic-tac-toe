@@ -6,18 +6,18 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import de.sengerts.tictactoe.model.AIDifficulty;
-import de.sengerts.tictactoe.model.AIPlayer;
-import de.sengerts.tictactoe.model.Dimension;
 import de.sengerts.tictactoe.model.GameState;
-import de.sengerts.tictactoe.model.HumanPlayer;
-import de.sengerts.tictactoe.model.Location;
-import de.sengerts.tictactoe.model.Player;
-import de.sengerts.tictactoe.model.PlayerSign;
-import de.sengerts.tictactoe.model.Territory;
-import de.sengerts.tictactoe.model.ai.EasyAIPlayer;
-import de.sengerts.tictactoe.model.ai.HardAIPlayer;
-import de.sengerts.tictactoe.model.ai.MediumAIPlayer;
+import de.sengerts.tictactoe.model.board.Location;
+import de.sengerts.tictactoe.model.board.Territory;
+import de.sengerts.tictactoe.model.players.AIPlayer;
+import de.sengerts.tictactoe.model.players.HumanPlayer;
+import de.sengerts.tictactoe.model.players.Player;
+import de.sengerts.tictactoe.model.players.PlayerSign;
+import de.sengerts.tictactoe.model.players.ai.EasyAIPlayer;
+import de.sengerts.tictactoe.model.players.ai.HardAIPlayer;
+import de.sengerts.tictactoe.model.players.ai.MediumAIPlayer;
+import de.sengerts.tictactoe.model.settings.AIDifficulty;
+import de.sengerts.tictactoe.model.settings.Dimension;
 
 /**
  * Class representing a tic tac toe game.
