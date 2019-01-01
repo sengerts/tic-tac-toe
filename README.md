@@ -1,4 +1,4 @@
-# Tic Tac Toe
+# Tic Tac Toe [![JavaDoc](https://img.shields.io/badge/javadoc-read-brightgreen.svg)](https://sengerts.github.io/tic-tac-toe/)
 
 Simple Tic Tac Toe game made with Java using LibGDX.
 
