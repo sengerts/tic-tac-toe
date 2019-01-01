@@ -12,6 +12,12 @@ public class TileAreadyMarkedException extends Exception {
 	 */
 	private static final long serialVersionUID = -612553262317812517L;
 	
+	/**
+	 * Another Constructor for class TileAreadyMarkedException.
+	 * 
+	 * Here an exception is created with a message that the tile is
+	 * already marked by a player.
+	 */
 	public TileAreadyMarkedException() {
 		super("Tile is already marked by a player.");
 	}
