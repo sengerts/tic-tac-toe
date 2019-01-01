@@ -86,7 +86,8 @@ public class Territory {
 	 * Gets if a given row in this territory is completely marked by one player by
 	 * checking if all elements of the stream of all tiles in this territory
 	 * filtered by the given row are marked and all tiles have been marked by the
-	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer()}
+	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(Supplier) 
+	 * isStreamOfTilesCompletelyMarkedByOnePlayer(Supplier&lt;Stream&lt;Tile&gt;&gt;)}
 	 * 
 	 * @param row the row of the tiles to check
 	 * @return true if all tiles in the row are marked by the same player, otherwise
@@ -103,7 +104,8 @@ public class Territory {
 	 * Gets if a given column in this territory is completely marked by one player
 	 * by checking if all elements of the stream of all tiles in this territory
 	 * filtered by the given column are marked and all tiles have been marked by the
-	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer()}
+	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(Supplier) 
+	 * isStreamOfTilesCompletelyMarkedByOnePlayer(Supplier&lt;Stream&lt;Tile&gt;&gt;)}
 	 * 
 	 * @param column the column of the tiles to check
 	 * @return true if all tiles in the column are marked by the same player,
