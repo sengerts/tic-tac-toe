@@ -86,8 +86,8 @@ public class Territory {
 	 * Gets if a given row in this territory is completely marked by one player by
 	 * checking if all elements of the stream of all tiles in this territory
 	 * filtered by the given row are marked and all tiles have been marked by the
-	 * same player. {@see isStreamOfTilesCompletelyMarkedByOnePlayer(Stream<Tile>
-	 * tilesStream}
+	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(Stream<Tile>
+	 * tilesStream)}
 	 * 
 	 * @param row the row of the tiles to check
 	 * @return true if all tiles in the row are marked by the same player, otherwise
@@ -104,8 +104,8 @@ public class Territory {
 	 * Gets if a given column in this territory is completely marked by one player
 	 * by checking if all elements of the stream of all tiles in this territory
 	 * filtered by the given column are marked and all tiles have been marked by the
-	 * same player. {@see isStreamOfTilesCompletelyMarkedByOnePlayer(Stream<Tile>
-	 * tilesStream}
+	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(Stream<Tile>
+	 * tilesStream)}
 	 * 
 	 * @param column the column of the tiles to check
 	 * @return true if all tiles in the column are marked by the same player,
@@ -229,7 +229,7 @@ public class Territory {
 	 * Gets a tile at a location.
 	 * 
 	 * Gets a tile at a given location by caculating the tile index by given
-	 * location ({@see getTileIndexByLocation(location)}) and returning the element
+	 * location ({@link #getTileIndexByLocation(Location location)}) and returning the element
 	 * with this index from the list in the instance variable tiles.
 	 * 
 	 * @param location the location to get the tile from

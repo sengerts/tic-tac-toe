@@ -155,9 +155,9 @@ public class GameLogic {
 	 * Ends a players move.
 	 * 
 	 * Ends a players move by checking if the game should now end
-	 * ({@see checkEnd()}) and if not, setting the next player whose turn it is
-	 * ({@see setNextPlayer()}) and then checking if its currently the AI player's
-	 * turn and if yes, letting it make its move ({@see checkAIPlayersTurn}).
+	 * ({@link #checkEnd()}) and if not, setting the next player whose turn it is
+	 * ({@link #setNextPlayer()}) and then checking if its currently the AI player's
+	 * turn and if yes, letting it make its move ({@link #checkAIPlayersTurn()}).
 	 */
 	public void endMove() {
 		checkEnd();
@@ -193,10 +193,10 @@ public class GameLogic {
 	 * 
 	 * Checks if the game should end by first checking if there is a winner
 	 * horizontally (in row), vertically (in column) or diagonally (in left or right
-	 * diag) and if so, let this player win the game ({@see winGame(Player
+	 * diag) and if so, let this player win the game ({@link #winGame(Player
 	 * winner)}). If that is not the case, it also checks whether all fields are
 	 * marked, resulting in the game being ended with a draw
-	 * ({@see endGameWithDraw}).
+	 * ({@link #endGameWithDraw}).
 	 */
 	private void checkEnd() {
 		Territory territory = getTerritory();
@@ -301,7 +301,7 @@ public class GameLogic {
 	 * Gets if the game is ingame.
 	 * 
 	 * Gets if the game is ingame by checking if the games state
-	 * {@see getGameState()} is GameState.INGAME.
+	 * {@link #getGameState()} is GameState.INGAME.
 	 * 
 	 * @return true if this tic tac toe game is still ingame, otherwise returns
 	 *         false
@@ -313,7 +313,7 @@ public class GameLogic {
 	/**
 	 * Gets if the game ended.
 	 * 
-	 * Gets if the game ended by checking if the games state {@see getGameState()}
+	 * Gets if the game ended by checking if the games state {@link #getGameState()}
 	 * is not GameState.INGAME.
 	 * 
 	 * @return true if this tic tac toe game ended already, otherwise returns false
@@ -326,7 +326,7 @@ public class GameLogic {
 	 * Gets if the game ended with a draw.
 	 * 
 	 * Gets if the game ended with a draw by checking if the games state
-	 * {@see getGameState()} is GameState.DRAW.
+	 * {@link #getGameState()} is GameState.DRAW.
 	 * 
 	 * @return true if this tic tac toe game ended with a draw, in all other cases
 	 *         returns false
