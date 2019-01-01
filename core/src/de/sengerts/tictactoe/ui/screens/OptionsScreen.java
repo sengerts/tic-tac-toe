@@ -138,7 +138,7 @@ public class OptionsScreen implements Screen {
 		// Create Slider
 		this.sliderLabel = new Label("[TTT_LIGHT]Amount of rows/ columns: " + territorySize, ticTacToeGame.getSkin(),
 				"dec-font-32", "light");
-		this.slider = new Slider(3, 21, 2, false, ticTacToeGame.getSkin());
+		this.slider = new Slider(3, 21, 1, false, ticTacToeGame.getSkin());
 		slider.setValue(territorySize);
 
 		// Create Opponent Toggle
