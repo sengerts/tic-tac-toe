@@ -24,7 +24,7 @@ public class TransitionScreen implements Screen {
 	 * Instance variable that stores the tic tac toe game this screen
 	 * is associated with.
 	 */
-	private final TicTacToeGame tictacToeGame;
+	private final TicTacToeGame ticTacToeGame;
 	/**
 	 * Instance variable that stores the current screen before transition.
 	 */
@@ -57,14 +57,16 @@ public class TransitionScreen implements Screen {
 	 * screen and no errors occur when transitioning the two screens.
 	 * 
 	 * @param ticTacToeGame the tic tac toe game this screen is associated with
+	 * @param currentScreen the current screen to fade out
+	 * @param nextScreen the next screen to fade in
 	 */
-	public TransitionScreen(final TicTacToeGame tictacToeGame, final Screen currentScreen, final Screen nextScreen) {
-		this.tictacToeGame = tictacToeGame;
+	public TransitionScreen(final TicTacToeGame ticTacToeGame, final Screen currentScreen, final Screen nextScreen) {
+		this.ticTacToeGame = ticTacToeGame;
 		this.currentScreen = currentScreen;
 		this.nextScreen = nextScreen;
 		
-		tictacToeGame.setScreen(nextScreen);
-		tictacToeGame.setScreen(currentScreen);
+		ticTacToeGame.setScreen(nextScreen);
+		ticTacToeGame.setScreen(currentScreen);
 	}
 
 	/*
@@ -101,18 +103,18 @@ public class TransitionScreen implements Screen {
 		Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
 
 		Color darkColor = Colors.get("TTT_DARK");
-		tictacToeGame.getShapeRenderer().setColor(darkColor.r, darkColor.g, darkColor.b, alpha);
+		ticTacToeGame.getShapeRenderer().setColor(darkColor.r, darkColor.g, darkColor.b, alpha);
 		
-		tictacToeGame.getShapeRenderer().begin(ShapeRenderer.ShapeType.Filled);
-		tictacToeGame.getShapeRenderer().rect(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-		tictacToeGame.getShapeRenderer().end();
+		ticTacToeGame.getShapeRenderer().begin(ShapeRenderer.ShapeType.Filled);
+		ticTacToeGame.getShapeRenderer().rect(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		ticTacToeGame.getShapeRenderer().end();
 		
 		Gdx.gl.glDisable(GL20.GL_BLEND);
 
 		if (alpha >= 1) {
 			fadeDirection = false;
 		} else if (alpha <= 0 && fadeDirection == false) {
-			tictacToeGame.setScreen(nextScreen);
+			ticTacToeGame.setScreen(nextScreen);
 		}
 		alpha += fadeDirection == true ? 0.04 : -0.04;
 	}

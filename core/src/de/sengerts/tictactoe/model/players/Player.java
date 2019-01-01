@@ -25,7 +25,7 @@ public abstract class Player {
 	 * Creates a new object of type Player with
 	 * the given tic tac toe game and player sign.
 	 * 
-	 * @param ticTacToeGame the tic tac toe game this player is associated with
+	 * @param gameLogic the game logic of the game this player is associated with
 	 * @param playerSign the sign of this player
 	 * @throws IllegalArgumentException if given player sign is null
 	 */

@@ -24,8 +24,8 @@ public final class Dimension {
 	 * values for the row count and column count which should both
 	 * be greater than zero.
 	 *  
-	 * @param rowCount the amount of rows for this dimension
-	 * @param columnCount the amount of columns for this dimension
+	 * @param rowsCount the amount of rows for this dimension
+	 * @param columnsCount the amount of columns for this dimension
 	 * @throws IllegalArgumentException if given row or column is not greater than zero.
 	 */
 	public Dimension(final int rowsCount, final int columnsCount) {

@@ -78,6 +78,8 @@ public class GameLogic {
 	 * rows and column counts for the games territory.
 	 * 
 	 * @param size the size of the tic tac toe game territory
+	 * @param aiOpponent whether this game is a game against an AI player
+	 * @param aiDifficulty the AI difficulty for this game
 	 */
 	public GameLogic(final Dimension size, final boolean aiOpponent, final AIDifficulty aiDifficulty) {
 		if (size == null) {

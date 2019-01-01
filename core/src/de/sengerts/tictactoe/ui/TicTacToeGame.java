@@ -102,7 +102,7 @@ public class TicTacToeGame extends Game {
 	 * 
 	 * @param width the new width of the game window
 	 * @param height the new height of the game window
-	 * @param a specific viewport to update
+	 * @param viewport a specific viewport to update
 	 */
 	public void adjustViewport(int width, int height, Viewport viewport) {
 		Vector2 size = Scaling.fit.apply(1, 1, width, height);

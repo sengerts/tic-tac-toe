@@ -22,8 +22,8 @@ public class HumanPlayer extends Player {
 	 * Creates a new HumanPlayer object extending the Player class with the given
 	 * tic tac toe game object and player sign object.
 	 * 
-	 * @param ticTacToeGame the tic tac toe game this player is associated with
-	 * @param playerSign    the sign of this human player
+	 * @param gameLogic the game logic of the game this player is associated with
+	 * @param playerSign the sign of this human player
 	 */
 	public HumanPlayer(final GameLogic gameLogic, final PlayerSign playerSign) {
 		super(gameLogic, playerSign);

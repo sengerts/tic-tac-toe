@@ -86,7 +86,7 @@ public class Territory {
 	 * Gets if a given row in this territory is completely marked by one player by
 	 * checking if all elements of the stream of all tiles in this territory
 	 * filtered by the given row are marked and all tiles have been marked by the
-	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(Stream<Tile>
+	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(HasStyle
 	 * tilesStream)}
 	 * 
 	 * @param row the row of the tiles to check
@@ -104,7 +104,7 @@ public class Territory {
 	 * Gets if a given column in this territory is completely marked by one player
 	 * by checking if all elements of the stream of all tiles in this territory
 	 * filtered by the given column are marked and all tiles have been marked by the
-	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(Stream<Tile>
+	 * same player. {@link #isStreamOfTilesCompletelyMarkedByOnePlayer(HasStyle
 	 * tilesStream)}
 	 * 
 	 * @param column the column of the tiles to check
@@ -153,7 +153,7 @@ public class Territory {
 	 * checking if the first tile is marked and if all other tiles are marked by the
 	 * same player as the first one.
 	 * 
-	 * @param tilesStream the stream of tiles to check
+	 * @param tilesStreamSupplier a supplier for the stream of tiles to check
 	 * @return true when all tiles in the stream of tiles are marked by the same
 	 *         person, otherwise false
 	 */
@@ -234,8 +234,7 @@ public class Territory {
 	 * 
 	 * @param location the location to get the tile from
 	 * @return the tile at the given location
-	 * @throws IllegalArgumentException  if given location is null
-	 * @throws TileDoesNotExistException if there is no tile at the given location
+	 * @throws IllegalArgumentException if given location is null or not inside the territory
 	 */
 	public Tile getTile(final Location location) {
 		if (location == null) {
