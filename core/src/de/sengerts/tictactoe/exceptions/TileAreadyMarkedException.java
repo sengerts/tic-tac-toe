@@ -1,5 +1,10 @@
 package de.sengerts.tictactoe.exceptions;
 
+/**
+ * Class representing an exception when a tile is already marked.
+ * 
+ * @author Tobias Senger
+ */
 public class TileAreadyMarkedException extends Exception {
 
 	/**
