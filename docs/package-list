@@ -1,0 +1,11 @@
+de.sengerts.tictactoe
+de.sengerts.tictactoe.desktop
+de.sengerts.tictactoe.exceptions
+de.sengerts.tictactoe.logic
+de.sengerts.tictactoe.model
+de.sengerts.tictactoe.model.board
+de.sengerts.tictactoe.model.players
+de.sengerts.tictactoe.model.players.ai
+de.sengerts.tictactoe.model.settings
+de.sengerts.tictactoe.ui
+de.sengerts.tictactoe.ui.screens
