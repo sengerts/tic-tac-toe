@@ -227,7 +227,7 @@ public class EndScreen implements Screen {
 	 * Adds a result label.
 	 * 
 	 * Adds a result label by creating a new label with the result text
-	 * ({@see getResultText()}) and adding it to the top of this screen's
+	 * ({@link #getResultText()}) and adding it to the top of this screen's
 	 * main table before adding a new row to the main table.
 	 */
 	private void addResultLabel() {
@@ -240,10 +240,10 @@ public class EndScreen implements Screen {
 	 * Gets the result text.
 	 * 
 	 * Gets the result text for this screen's ended tic tac toe game.
-	 * When there is a draw the text retrieved by {@see getDrawText()} is returned.
+	 * When there is a draw the text retrieved by {@link #getDrawText()} is returned.
 	 * When this screen's game was against an AI player, the text retrieved by
-	 * {@see getPlayingAgainstAIText()} is returned, otherwise the text retrieved
-	 * by {@see getOnlyHumansPlayingText()} is returned.
+	 * {@link #getPlayingAgainstAIText()} is returned, otherwise the text retrieved
+	 * by {@link #getOnlyHumansPlayingText()} is returned.
 	 * 
 	 * @return the result text for this screen's tic tac toe game
 	 */

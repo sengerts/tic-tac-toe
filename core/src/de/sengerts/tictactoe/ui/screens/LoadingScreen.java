@@ -103,7 +103,7 @@ public class LoadingScreen implements Screen {
 	 * Renders this loading screen by clearing this screen with the
 	 * "dark" game color and updating the asset manager loading process.
 	 * When the asset manager has finished loading and didn't finish
-	 * yet, the method {@see finishLoading()} is called.
+	 * yet, the method {@link #finishLoading()} is called.
 	 */
 	/*
 	 * (non-Javadoc)
