@@ -1,4 +1,4 @@
-# Tic Tac Toe [![Release](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/sengerts/tic-tac-toe/releases/latest) [![JavaDoc](https://img.shields.io/badge/javadoc-read-brightgreen.svg)](https://sengerts.github.io/tic-tac-toe/)
+# Tic Tac Toe [![Release](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/sengerts/tic-tac-toe/releases/latest) [![JavaDoc](https://img.shields.io/badge/javadoc-read-brightgreen.svg)](https://sengerts.github.io/tic-tac-toe/)
 Simple Tic Tac Toe game made with Java using LibGDX.
 
 ## Built With
