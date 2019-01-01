@@ -60,7 +60,7 @@ public abstract class Player {
 	public abstract boolean isAIPlayer();
 	
 	/**
-	 * Getter for this players tic tac toe game.
+	 * Gets this players tic tac toe game.
 	 * 
 	 * Returns the tic tac toe game object that 
 	 * this player is associated with.
@@ -72,7 +72,7 @@ public abstract class Player {
 	}
 	
 	/**
-	 * Getter for the player sign.
+	 * Gets the player sign.
 	 * 
 	 * Returns the name of this players player sign
 	 * enum value.
@@ -84,7 +84,7 @@ public abstract class Player {
 	}
 
 	/**
-	 * Getter for the player sign.
+	 * Gets the player sign.
 	 * 
 	 * Returns the player sign of this player object.
 	 * Can not be null.

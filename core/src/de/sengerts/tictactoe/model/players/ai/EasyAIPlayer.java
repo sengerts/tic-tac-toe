@@ -8,6 +8,11 @@ import de.sengerts.tictactoe.model.board.Tile;
 import de.sengerts.tictactoe.model.players.AIPlayer;
 import de.sengerts.tictactoe.model.players.PlayerSign;
 
+/**
+ * Class representing an easy AI player.
+ * 
+ * @author Tobias Senger
+ */
 public class EasyAIPlayer extends AIPlayer {
 
 	/**

@@ -7,7 +7,7 @@ import de.sengerts.tictactoe.logic.GameLogic;
 import de.sengerts.tictactoe.model.board.Tile;
 
 /**
- * Class representing a AI player of a tic tac toe game.
+ * Class representing an AI player of a tic tac toe game.
  * 
  * @author Tobias Senger
  */

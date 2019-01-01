@@ -37,7 +37,7 @@ public enum PlayerSign {
 	}
 	
 	/**
-	 * Getter for the color name.
+	 * Gets the color name.
 	 * 
 	 * Returns the colors internal name.
 	 * 
@@ -48,7 +48,7 @@ public enum PlayerSign {
 	}
 	
 	/**
-	 * Getter for the color.
+	 * Gets the color.
 	 * 
 	 * Returns a color object of this player sign enum value.
 	 * 

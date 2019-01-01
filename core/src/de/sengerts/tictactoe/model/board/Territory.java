@@ -294,7 +294,7 @@ public class Territory {
 	}
 
 	/**
-	 * Getter for this players tic tac toe game.
+	 * Gets this players tic tac toe game.
 	 * 
 	 * Returns the tic tac toe game object that this territory is associated with.
 	 * 
@@ -305,7 +305,7 @@ public class Territory {
 	}
 
 	/**
-	 * Getter for the tiles.
+	 * Gets the tiles.
 	 * 
 	 * Returns all tiles of this territory object representing all fields of this
 	 * square tic tac toe territory.
@@ -317,7 +317,7 @@ public class Territory {
 	}
 
 	/**
-	 * Getter for the size.
+	 * Gets the size.
 	 * 
 	 * Returns the size of this territory object representing the rows and columns
 	 * counts of this square territory.

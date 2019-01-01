@@ -40,7 +40,7 @@ public final class Location {
 	}
 
 	/**
-	 * Getter for the row.
+	 * Gets the row.
 	 * 
 	 * Returns the row integer value of this location object.
 	 * Can not be negative.
@@ -52,7 +52,7 @@ public final class Location {
 	}
 
 	/**
-	 * Getter for the column.
+	 * Gets the column.
 	 * 
 	 * Returns the column integer value of this location object.
 	 * Can not be negative.
@@ -64,6 +64,7 @@ public final class Location {
 	}
 
 	/*
+	 * (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
 	@Override
@@ -79,6 +80,7 @@ public final class Location {
 	}
 	
 	/*
+	 * (non-Javadoc)
      * @see java.lang.Object#toString()
      */
 	@Override

@@ -41,7 +41,7 @@ public class Tile {
 	}
 
 	/**
-	 * Getter for the location.
+	 * Gets the location.
 	 * 
 	 * Returns the location object of this tile. Can not be null.
 	 * 
@@ -52,7 +52,7 @@ public class Tile {
 	}
 
 	/**
-	 * Getter for the marked player.
+	 * Gets the marked player.
 	 * 
 	 * Returns a player object of this tile if this tile is marked. Returns null by
 	 * default as long as no player marked this tile in the game.
@@ -92,6 +92,7 @@ public class Tile {
 	}
 
 	/*
+	 * (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -107,6 +108,7 @@ public class Tile {
 	}
 
 	/*
+	 * (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

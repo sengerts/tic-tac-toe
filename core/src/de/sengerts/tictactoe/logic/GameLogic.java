@@ -349,7 +349,7 @@ public class GameLogic {
 	}
 
 	/**
-	 * Getter for the size.
+	 * Gets the size.
 	 * 
 	 * Returns the size of this tic tac toe game representing the rows and columns
 	 * counts of its square territory.
@@ -361,7 +361,7 @@ public class GameLogic {
 	}
 
 	/**
-	 * Getter for the games territory.
+	 * Gets the games territory.
 	 * 
 	 * Returns the territory object for this tic tac toe game.
 	 * 
@@ -372,7 +372,7 @@ public class GameLogic {
 	}
 
 	/**
-	 * Getter for the games players set.
+	 * Gets the games players set.
 	 * 
 	 * Returns a set of player objects for this tic tac toe game.
 	 * 
@@ -383,7 +383,7 @@ public class GameLogic {
 	}
 
 	/**
-	 * Getter for the games state.
+	 * Gets the games state.
 	 * 
 	 * Returns the value of the instance variable gameState. Possible values for the
 	 * game state are INGAME, DRAW and WON.
@@ -395,7 +395,7 @@ public class GameLogic {
 	}
 
 	/**
-	 * Getter for the games winner.
+	 * Gets the games winner.
 	 * 
 	 * Returns the value of the instance variable winner containing null or a
 	 * reference to a player who won this tic tac toe game.

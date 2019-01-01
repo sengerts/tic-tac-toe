@@ -11,6 +11,11 @@ import de.sengerts.tictactoe.model.players.AIPlayer;
 import de.sengerts.tictactoe.model.players.PlayerSign;
 import de.sengerts.tictactoe.model.settings.Dimension;
 
+/**
+ * Class representing a medium AI player.
+ * 
+ * @author Tobias Senger
+ */
 public class MediumAIPlayer extends AIPlayer {
 
 	/**

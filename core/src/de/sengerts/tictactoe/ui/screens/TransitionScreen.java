@@ -9,33 +9,83 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 import de.sengerts.tictactoe.ui.TicTacToeGame;
 
+/**
+ * Class representing a transition screen that fades out a current
+ * screen and fades in a new screen.
+ * 
+ * Not used at the moment.
+ * 
+ * @author Leowbattle - initial work
+ * @author Tobias Senger - some changes and adjustments
+ **/
 public class TransitionScreen implements Screen {
 
+	/**
+	 * Instance variable that stores the tic tac toe game this screen
+	 * is associated with.
+	 */
 	private final TicTacToeGame tictacToeGame;
+	/**
+	 * Instance variable that stores the current screen before transition.
+	 */
 	private final Screen currentScreen;
+	/**
+	 * Instance variable that stores the next screen after transition.
+	 */
 	private final Screen nextScreen;
 
-	// Once this reaches 1.0f, the next scene is shown
+	/**
+	 * Instance variable that stores the current alpha value.
+	 * Once this reaches 1.0f, the next scene is shown.
+	 */
 	private float alpha = 0;
-	// true if fade in, false if fade out
+	/**
+	 * Instance variable that stores the fade direction for
+	 * the transition. This value is true if
+	 * fading in, false when fading out.
+	 */
 	private boolean fadeDirection = true;
 
+	/**
+	 * Another constructor for class TransitionScreen.
+	 * 
+	 * Creates a new object of type TransitionScreen by assigning the tic tac toe game
+	 * associated with this screen to the instance variable ticTacToeGame as well as assigning
+	 * the given current and next screen to its corresponding instance variables currentScreen
+	 * and nextScreen and setting this screen's tic tac toe game once to the next screen before
+	 * setting it back to the old screen so that the create method is once called for the next
+	 * screen and no errors occur when transitioning the two screens.
+	 * 
+	 * @param ticTacToeGame the tic tac toe game this screen is associated with
+	 */
 	public TransitionScreen(final TicTacToeGame tictacToeGame, final Screen currentScreen, final Screen nextScreen) {
 		this.tictacToeGame = tictacToeGame;
 		this.currentScreen = currentScreen;
 		this.nextScreen = nextScreen;
-
-		// Set screens temporarily so that the create() method is called
-		// and no null pointer exceptions occur
+		
 		tictacToeGame.setScreen(nextScreen);
 		tictacToeGame.setScreen(currentScreen);
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#show()
+	 */
 	@Override
 	public void show() {
 
 	}
 
+	/**
+	 * Renders this transition screen.
+	 * 
+	 * Renders this transition screen by fading out the current screen
+	 * and fading in the next screen over time.
+	 */
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#render(float)
+	 */
 	@Override
 	public void render(float delta) {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
@@ -67,26 +117,46 @@ public class TransitionScreen implements Screen {
 		alpha += fadeDirection == true ? 0.04 : -0.04;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#resize(int, int)
+	 */
 	@Override
 	public void resize(int width, int height) {
 
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#pause()
+	 */
 	@Override
 	public void pause() {
 
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#resume()
+	 */
 	@Override
 	public void resume() {
 
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#hide()
+	 */
 	@Override
 	public void hide() {
 
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.badlogic.gdx.Screen#dispose()
+	 */
 	@Override
 	public void dispose() {
 
